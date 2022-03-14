@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-class CardsClima extends StatelessWidget {
-  final String day;
-  final String wind;
+class CardsToday extends StatelessWidget {
   final String temperature;
-  const CardsClima({
+  final String wind;
+  final String description;
+
+  const CardsToday({
     Key? key,
-    this.day = '',
-    this.wind = '',
     this.temperature = '',
+    this.wind = '',
+    this.description = '',
   }) : super(key: key);
 
   @override
@@ -22,9 +23,9 @@ class CardsClima extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text(day),
             Text(temperature),
             Text(wind),
+            Text(description),
           ],
         ),
       ),
